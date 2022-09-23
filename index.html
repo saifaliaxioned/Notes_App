@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- If multi-language site, reconsider usage of html lang declaration here. -->
-<html lang="en"> 
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -13,10 +13,10 @@
   <!-- Place favicon.ico in the root directory: mathiasbynens.be/notes/touch-icons -->
   <link rel="shortcut icon" href="favicon.ico" />
   <!--font-awesome link for icons-->
-  <link rel="stylesheet" media="screen" href="assets/vendor/font-awesome/css/all.min.css" >
+  <link rel="stylesheet" media="screen" href="assets/vendor/font-awesome/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
   <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
-  <link rel="stylesheet" media="screen" href="assets/css/style.css" >
+  <link rel="stylesheet" media="screen" href="assets/css/style.css">
 </head>
 
 <body>
@@ -24,11 +24,40 @@
   <div class="container">
     <!--main section start-->
     <main>
-
+      <!-- Notes App start -->
+      <div class="Notes">
+        <div class="wrapper">
+          <div class="button">
+            <a href="#FIXME" rel="noopener noreferrer" title="Add notes" class="note-btn">add note</a>
+          </div>
+          <ul class="note-items">
+            <li class="note-card">
+              <ul class="note-commandArea">
+                <li class="command-btn">
+                  <a href="#FIXME" title="Edit" rel="noopener noreferrer" class="edit-btn edit-icon">edit</a>
+                </li>
+                <li class="command-btn">
+                  <a href="#FIXME" title="Delete" rel="noopener noreferrer" class="delete-btn delete-icon">delete</a>
+                </li>
+              </ul>
+              <div class="result">
+                <p class="textStore-area hide-content">
+                  <span class="note-result">text</span>
+                </p>
+                <div class="input-area">
+                  <textarea name="textarea" id="textarea" cols="47" rows="26"></textarea>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Notes App end -->
     </main>
     <!--main section end-->
   </div>
   <!--container end-->
   <script src="assets/js/script.js"></script>
 </body>
+
 </html>
