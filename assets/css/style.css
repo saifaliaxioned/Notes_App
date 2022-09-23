@@ -156,6 +156,7 @@ body {
 .note-card {
   margin: 18px 0;
   min-width: 400px;
+  display: none;
   flex: 0 0 29%;
   box-shadow: 0 -2px 12px rgb(0, 0, 0 ,0.13);
 }
@@ -190,7 +191,10 @@ body {
   position: relative;
 }
 
-.result .textStore-area {  overflow-y: scroll; }
+.result .textStore-area {  
+  display: none;
+  overflow-y: scroll;
+}
 
 .result > * {
   position: absolute;
@@ -209,7 +213,7 @@ body {
   line-height: 30px;
 }
 
-.hide-content { display: none; }
+.show-content { display: block; }
 
 /* notes app end */
 
