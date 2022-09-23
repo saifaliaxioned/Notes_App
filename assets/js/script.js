@@ -3,15 +3,13 @@ var noteItems = document.querySelector('.note-items');
 var noteCard = document.querySelectorAll('.note-card');
 var addNote = document.querySelector('.note-btn');
 var showContent = document.querySelector('.show-content');
-var editBtn = document.querySelector('.edit-btn');
-var deleteBtn = document.querySelector('.delete-btn');
 var noteResult = document.querySelectorAll('.note-result');
 var textArea = document.querySelectorAll('.textarea');
 
 addNote.addEventListener('click', function () {
-  var notelist = document.createElement('li');
-  notelist.className = 'note-card';
-  notelist.innerHTML = ` 
+  var noteList = document.createElement('li');
+  noteList.className = 'note-card';
+  noteList.innerHTML = ` 
               <ul class="note-commandArea">
                 <li class="command-btn">
                   <a href="#FIXME" title="Edit" rel="noopener noreferrer" class="edit-btn edit-icon">edit</a>
@@ -29,13 +27,30 @@ addNote.addEventListener('click', function () {
                 </div>
               </div>
               `;
-  noteItems.appendChild(notelist);
+  noteItems.appendChild(noteList);
+  var editBtn = document.querySelectorAll('.edit-btn');
+  var deleteBtn = document.querySelectorAll('.delete-btn');
+  editBtn.forEach(function (btn, index) {
+    btn.addEventListener('click', function (e) {
+      var ele = e.target
+      // ele = ele.parent
+
+      console.log(e.target.parentElement.parentElement.nextElementSibling.children[1]);
+      var inputArea = document.querySelectorAll('.input-area')
+      var textStoreArea = document.querySelectorAll('.textStore-area');
+      if (inputArea[index].classList.contains('show-content')) {
+        inputArea[index].classList.remove('show-content');
+        textStoreArea[index].classList.add('show-content');
+      } else {
+        inputArea[index].classList.add('show-content');
+      }
+    });
+  })
+
+
 });
 
-editBtn.addEventListener('click',function () {
 
-  
-});
 
 
 
