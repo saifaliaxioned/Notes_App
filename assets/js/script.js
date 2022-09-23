@@ -32,18 +32,23 @@ addNote.addEventListener('click', function () {
   var deleteBtn = document.querySelectorAll('.delete-btn');
   editBtn.forEach(function (btn, index) {
     btn.addEventListener('click', function (e) {
-      var ele = e.target
+      // var ele = e.target
       // ele = ele.parent
-
-      console.log(e.target.parentElement.parentElement.nextElementSibling.children[1]);
-      var inputArea = document.querySelectorAll('.input-area')
+      console.log();
+      var inputArea = e.target.parentElement.parentElement.nextElementSibling.children[1].firstElementChild;
       var textStoreArea = document.querySelectorAll('.textStore-area');
-      if (inputArea[index].classList.contains('show-content')) {
+      if (inputArea.classList.contains('show-content')) {
         inputArea[index].classList.remove('show-content');
         textStoreArea[index].classList.add('show-content');
       } else {
         inputArea[index].classList.add('show-content');
       }
+      // if (inputArea[index].classList.contains('show-content')) {
+      //   inputArea[index].classList.toggle('show-content');
+      //   textStoreArea[index].classList.toggle('show-content');
+      // } else {
+      //   inputArea[index].classList.add('show-content');
+      // }
     });
   })
 
