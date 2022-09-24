@@ -85,11 +85,13 @@ sub { bottom: -.25em; }
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: sans-serif;
 }
 
@@ -114,9 +116,7 @@ li {
 =================================*/
 
 /* notes app start */
-body {
-  background: rgb(123,218,243);
-}
+body { background: rgb(123,218,243); }
 
 .Notes .wrapper {
   width: 100%;
@@ -149,31 +149,43 @@ body {
 
 .note-items {
   padding: 60px 1.7%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 36px;
 }
 
 .note-card {
   margin: 18px 0;
   min-width: 400px;
-  flex: 0 0 29%;
-  box-shadow: 0 -2px 12px rgb(0, 0, 0 ,0.13);
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 29%;
+          flex: 0 0 29%;
+  -webkit-box-shadow: 0 -2px 12px rgb(0, 0, 0 ,0.13);
+          box-shadow: 0 -2px 12px rgb(0, 0, 0 ,0.13);
 }
 
 .note-commandArea { 
   padding: 9px 4%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 20px;
   background: rgb(158, 200, 98);
 }
 
-.edit-btn,.delete-btn {
-  text-indent: -9999px;
-}
+.edit-btn,.delete-btn { text-indent: -9999px; }
 
 .edit-icon::before ,.delete-icon::before {
   color: rgb(255,255,255);
@@ -195,7 +207,6 @@ body {
 .textStore-area {  
   display: none;
   background: rgb(255,255,255);
-  overflow-y: scroll;
 }
 
 .result > * {
@@ -204,7 +215,7 @@ body {
   height: 100%;
 }
 
-.input-area {display: none;}
+.input-area { display: none; }
 
 .input-area  textarea {
   height: 100%;
